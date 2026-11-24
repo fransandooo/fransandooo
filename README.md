@@ -60,13 +60,28 @@ mid-2027.
 
 ---
 
+### Currently building
+
+**[falconet](https://github.com/fransandooo/falconet)**: detecting and tracking small drones in thermal
+infrared video, end to end in Rust. The detector is trained with [Burn](https://burn.dev), the tracker
+is ByteTrack written from scratch, and the pipeline is heading towards INT8, custom GPU kernels and a
+WebGPU browser demo. <sub><i>Work in progress (phase 1 of 5).</i></sub>
+
+- PyTorch reference detector (1.39 M params, trained from scratch): **AP50 0.841** on the Anti-UAV410 validation split
+- COCO and Anti-UAV410 metrics reimplemented in Rust, matching `pycocotools` and the official code to 10⁻⁶
+- ByteTrack in Rust: identical identities to an independent implementation on 20,000 test frames
+
+<sub><b>Stack:</b> Rust · Burn · PyTorch · ONNX · MLflow · CUDA / WebGPU</sub>
+
+---
+
 ### Technical skills
 
 | | |
 | --- | --- |
-| **Machine Learning** | PyTorch, TensorFlow, scikit-learn, MediaPipe, OpenCV, YOLO (Ultralytics) |
-| **ML Engineering** | Experiment tracking (TensorBoard, run manifests), config-driven training, FastAPI model serving, Docker |
-| **Languages** | Python, C / C++, Java, TypeScript / JavaScript, C#, SQL |
+| **Machine Learning** | PyTorch, Burn (Rust), TensorFlow, scikit-learn, MediaPipe, OpenCV, YOLO (Ultralytics) |
+| **ML Engineering** | Experiment tracking (MLflow, TensorBoard, run manifests), config-driven training, FastAPI model serving, Docker |
+| **Languages** | Python, Rust, C / C++, Java, TypeScript / JavaScript, C#, SQL |
 | **Software** | Node.js, React, React Native / Expo, Express, Django |
 | **Tools** | Git, Linux, Microsoft Azure, Firebase, LaTeX |
 
